@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 600px;
+        }
+
+        fieldset {
+            border: 1px solid #777;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            padding: 0 5px;
+            font-size: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 4px 0;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .btn-submit {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+        
+        <fieldset>
+            <legend>Your message:</legend>
+            <table>
+                <tr>
+                    <td style="width: 100px;">To</td>
+                    <td><input type="text" name="to" value="Example Cafe" style="width: 200px;"></td>
+                </tr>
+                <tr>
+                    <td>Your email</td>
+                    <td><input type="email" name="user_email" style="width: 200px;"></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td><textarea name="message" rows="8" style="width: 380px;"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Attach File</td>
+                    <td><input type="file" name="attachment"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>How you found us:</legend>
+            <table>
+                <tr>
+                    <td style="width: 130px;">How did you hear of us</td>
+                    <td>
+                        <select name="source">
+                            <option value="Google" selected>Google</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Friend">Friend</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Newsletter</td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="newsletter" checked> 
+                            Ensure this box is checked if you would like to receive email updates
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <input type="submit" value="Send message" class="btn-submit">
+
+        <br><br><hr style="border: none; border-top: 4px solid #a6c8ff; margin: 30px 0;"><br>
+        <div>
+            <p style="margin: 5px 0;">Name:</p>
+            <input type="text" name="name" style="width: 200px;"><br><br>
+
+            <p style="margin: 5px 0;">Telephone Number:</p>
+            <input type="tel" name="phone" style="width: 200px;"><br><br>
+
+            <p style="margin: 5px 0;">Email:</p>
+            <input type="email" name="email_confirm" style="width: 200px;"><br><br>
+
+            <p style="margin: 5px 0;">Favorite Color:</p>
+            <input type="color" name="favcolor" value="#0000ff" style="width: 50px; height: 25px; cursor: pointer;"><br><br>
+
+            <p style="margin: 5px 0;">Date of Birth:</p>
+            <input type="date" name="dob" value="2015-07-16"><br><br>
+
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
+</body>
+</html>
