@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo</title>
+    <style>
+        .containner {
+            display: grid;
+            grid-template-areas: "menu" "promotion_1" "promotion_2" "gift" "footer";
+        }
+        
+        .containner div.menu {
+            grid-area: menu;
+        }
+        
+        .containner div.promotion_1 {
+            grid-area: promotion_1;
+        }
+        
+        .containner div.promotion_2 {
+            grid-area: promotion_2;
+        }
+        
+        .containner div.gif {
+            grid-area: gift;
+        }
+        
+        .containner div.footer {
+            grid-area: footer;
+        }
+        
+        #container_menu {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+        }
+        
+        ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        #menu_right {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="container_menu" class="menu">
+            <div>
+                <ul>
+                    <li>Shop</li>
+                    <li>Offers</li>
+                    <li>Our Story</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div>
+                <img src="./imageweb/logoo.png" alt="">
+            </div>
+            <div id="menu_right">
+                <input type="text" placeholder="🔍 Search Product..." style="height: 50px; width: 250px">
+                <img src="./imageweb/shopping-cart.png" width="15px" height="15px">
+                <span> Cart (0)</span>
+                <img src="./imageweb/Avatar 1.png" alt="">
+            </div>
+        </div>
+        <div class="promotion_1">
+            <H1 style="text-align: center; font-size :60px;">Promotions</H1>
+        </div>
+        <div class="promotion_2">
+
+        </div>
+        <div class="gift">gift</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
