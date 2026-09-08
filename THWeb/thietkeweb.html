@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "menu" "search" "content" "footer";
+        }
+        
+        .container menu {
+            grid-area: menu;
+        }
+        
+        #menu {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        li {
+            display: inline;
+        }
+        
+        .container .search {
+            grid-area: search;
+        }
+        
+        .container .content {
+            grid-area: trend;
+        }
+        
+        .container .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="menu" class="menu">
+            <div>
+                <img src="./imageweb/Group.png" alt="" />
+                <img src="./imageweb/SearchEngine.png" alt="" />
+            </div>
+            <div id="menu-items">
+                <ul>
+                    <li>Images</li>
+                    <li>Video</li>
+                    <li>Shopping</li>
+                    <li>News</li>
+                </ul>
+            </div>
+            <div>3</div>
+        </div>
+        <div class="search">search</div>
+
+        <div class="trend">trend</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
