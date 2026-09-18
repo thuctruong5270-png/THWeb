@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan4HTML</title>
+</head>
+<body>
+    <button id="button">
+            click
+    </button>
+    <button id="resetButton">
+            reset
+    </button>
+    <button id="count">
+            count
+    </button>
+    <p> Đoạn văn </p>
+    <p id="dem">0</p>
+    <button id="Xuat">Show</button>
+    <button id="An">Hidden</button>
+    <button id="update">Cập nhật</button>
+    <input type="text" id="input" placeholder="Nhập nội dung thay đổi">
+    <button id="red" style="background-color: red;">Đỏ</button>
+    <button id="yellow" style="background-color: yellow;">Vàng</button>
+    <button id="blue" style="background-color: blue;">Xanh</button>
+    <button id="white" style="background-color: white;">Trắng</button>
+    <button id="add">Thêm</button>
+    <button id="delete">Xóa</button>
+    <input type="text" id="them" placeholder="Nhập nội dung cần thay đổi">
+    <ul id="list">LIST</ul>
+    <input id="demkitu" type="text" placeholder="Nhập để đếm ký tự">
+    <p>Số ký tự đã nhập là: <span id="length">0</span></p>
+    <p id="change">Có thể đổi kiểu chữ</p>
+    <script>
+            var buttonn = document.getElementById('button');
+            var reset = document.getElementById('resetButton');
+            var para = document.querySelector('p');
+            var a = document.getElementById('dem');
+            var count = document.getElementById('count');
+            var Show = document.getElementById('Xuat');
+            var Hidden = document.getElementById('An');
+            var update = document.getElementById('update');
+            var input = document.getElementById('input');
+            var red = document.getElementById('red');
+            var yellow = document.getElementById('yellow');
+            var blue = document.getElementById('blue');
+            var white = document.getElementById('white');
+            var add = document.getElementById('add');
+            var del = document.getElementById('delete');
+            var them = document.getElementById('them');
+            var list = document.getElementById('list');
+            var demkitu = document.getElementById('demkitu');
+            var countp = document.getElementById('length');
+            var change = document.getElementById('change');
+            change.addEventListener({
+                
+            })
+            demkitu.addEventListener('input',function(){
+                var count = demkitu.value.length;
+                countp.textContent = count;
+            })
+            add.onclick = function(){
+                var li = document.createElement('li');
+                li.textContent = them.value;
+                var del =document.createElement('button');
+                del.textContent = 'x';
+                del.style.marginLeft = '50px';
+                del.style.color = 'green';
+                list.appendChild(li);
+                del.onclick = function(){
+                    li.remove();
+                }
+                li.appendChild(del);
+            }
+            red.onclick = function() {
+                document.body.style.backgroundColor = 'red';
+            }
+            yellow.onclick = function() {
+                document.body.style.backgroundColor = 'yellow';
+            }
+            blue.onclick = function() {
+                document.body.style.backgroundColor = 'blue';
+            }
+            white.onclick = function() {
+                document.body.style.backgroundColor = 'white';
+            }
+            update.onclick = function(){
+                para.textContent = input.value;
+            }
+            Show.onclick = function(){
+                para.style.display = 'flex';
+            }
+            Hidden.onclick = function(){
+                para.style.display = 'none';
+            }
+
+            buttonn.onclick = function() {
+                para.style.color = 'red';
+            }
+            reset.onclick = function(){
+                para.style.color = "black";
+            }
+            var countn = 0;
+            count.onclick = function(){
+                countn++;
+                dem.textContent = countn;
+            }
+    </script>
+</body>
+</html>
