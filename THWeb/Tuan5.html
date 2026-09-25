@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //bai6 tuan4
+        // var input = document.createElement('input');  
+        // document.body.appendChild (input);
+        // var button = document.createElement('button');
+        // button.textContent = 'Thêm';
+        // document.body.appendChild (button);
+        // var ul = document.createElement ('ul');
+        // ul.textContent = 'LIST';
+        // document.body.appendChild (ul);
+        // button.onclick = () => {
+        //     var li = document.createElement('li');
+        //     li.textContent = input.value;
+        //     ul.appendChild (li);
+        //     input.value = '';
+        //     input.focus();
+        // }
+        
+        // //bai1
+        // let valuea = prompt("Nhap ma so SV" , 0);
+        // let valueb = prompt("Nhap ho va ten", )
+        // 
+        let valuea = prompt("a", 10);
+        let valueb = prompt("b", 10);
+        var p = document.createElement('p');
+        var pa = document.createElement('p');
+        p.textContent = `Số a: ${valuea}`;
+        document.body.appendChild(p);
+        pa.textContent = `Số b: ${valueb}`;
+        document.body.appendChild(pa);
+        var buttonc = document.createElement('button');
+        var buttont = document.createElement('button');
+        var buttonn = document.createElement('button');
+        var buttonch = document.createElement('button');
+        buttonc.textContent = '+';
+        buttont.textContent = '-';
+        buttonn.textContent = '*';
+        buttonch.textContent = '/';
+        document.body.appendChild(buttonc);
+        document.body.appendChild(buttont);
+        document.body.appendChild(buttonn);
+        document.body.appendChild(buttonch);
+        buttonc.onclick = () => {
+            let valuec = parseInt(valuea) + parseInt(valueb);
+            var kqc = document.createElement('p');
+            kqc.textContent = `KQcong: ${valuec}`;
+            document.body.appendChild (kqc);
+        }
+         buttont.onclick = () => {
+            let valuet  = parseInt(valuea) - parseInt(valueb);
+            var kqt = document.createElement('p');
+            kqt.textContent = `KQtru: ${valuet}`;
+            document.body.appendChild (kqt);
+        }
+         buttonn.onclick = () => {
+            let valuen = parseInt(valuea) * parseInt(valueb);
+            var kqn = document.createElement('p');
+            kqn.textContent = `KQnhan: ${valuen}`;
+            document.body.appendChild (kqn);
+        }
+         buttonch.onclick = () => {
+            let valuech = parseInt(valuea) / parseInt(valueb);
+            var kqch = document.createElement('p');
+            kqch.textContent = `KQchia: ${valuech}`;
+            document.body.appendChild (kqch);
+        }
+    </script>
+</body>
+</html>
