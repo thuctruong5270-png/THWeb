@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var thucn = "hijack".match(/[a-g]/g);
+       document.write(thucn);
+       var bnc = "Học ReactJS Và TypeScript".match(/[A-Z]/g);
+       document.write(bnc);
+       var input = document.createElement('input');
+       input.placeholder = "nhập password";
+       document.body.appendChild (input);
+       var button = document.createElement('button');
+       button.textContent = "Tạo";
+       document.body.appendChild(button);
+       button.onclick = () => {
+            var password = input.value;
+            if (!password.match(/^[A-Z]/))           
+            {
+                alert("Mật khẩu phải viết hoa chữ đầu tiên");
+            }
+            else if (!password.length >=8 || !password.length <= 13)
+            {
+                alert("Mật khẩu phải có độ dài từ 8 đến 13 ký tự");
+            }
+
+        }
+       
+       var password = "";
+
+    </script>
+</body>
+</html>
