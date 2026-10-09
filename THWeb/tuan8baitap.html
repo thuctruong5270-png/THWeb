@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAI TAP TUAN8</title>
+</head>
+<body>
+    <script>
+        // --- BÀI 1 ---
+        const btnBai1 = document.querySelector('#btn-bai1');
+        const textBai1 = document.querySelector('#text-bai1');
+        btnBai1.addEventListener('click', function() {
+            textBai1.style.color = 'red';
+        });
+
+        // --- BÀI 2 ---
+        const btnBai2 = document.querySelector('#btn-bai2');
+        const contentBai2 = document.querySelector('#content-bai2');
+        btnBai2.addEventListener('click', function() {
+            if (contentBai2.style.display === 'none') {
+                contentBai2.style.display = 'block';
+            } else {
+                contentBai2.style.display = 'none';
+            }
+        });
+
+        // --- BÀI 3 ---
+        let countBai3 = 0;
+        const btnBai3 = document.querySelector('#btn-bai3');
+        const countSpanBai3 = document.querySelector('#count-bai3');
+        btnBai3.addEventListener('click', function() {
+            countBai3++;
+            countSpanBai3.textContent = countBai3;
+        });
+
+        // --- BÀI 4 ---
+        const btnBai4 = document.querySelector('#btn-bai4');
+        const inputBai4 = document.querySelector('#input-bai4');
+        const outputBai4 = document.querySelector('#output-bai4');
+        btnBai4.addEventListener('click', function() {
+            const val = inputBai4.value;
+            if (val.trim() !== '') {
+                outputBai4.textContent = val;
+            }
+        });
+
+        // --- BÀI 5 ---
+        const colorBtns = document.querySelectorAll('.color-btn-item');
+        colorBtns.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                const chosenColor = event.target.dataset.color;
+                document.body.style.backgroundColor = chosenColor;
+            });
+        });
+
+        // --- BÀI 6 ---
+        const btnBai6 = document.querySelector('#btn-bai6');
+        const inputBai6 = document.querySelector('#input-bai6');
+        const todoListBai6 = document.querySelector('#todo-list-bai6');
+        btnBai6.addEventListener('click', function() {
+            const val = inputBai6.value.trim();
+            if (val !== '') {
+                const li = document.createElement('li');
+                li.textContent = val;
+                todoListBai6.appendChild(li);
+                inputBai6.value = '';
+            }
+        });
+
+        // --- BÀI 7 ---
+        const btnBai7 = document.querySelector('#btn-bai7');
+        const inputBai7 = document.querySelector('#input-bai7');
+        const listBai7 = document.querySelector('#list-bai7');
+        
+        btnBai7.addEventListener('click', function() {
+            const val = inputBai7.value.trim();
+            if (val !== '') {
+                const li = document.createElement('li');
+                li.innerHTML = `${val} <button class="del-btn" style="background:red; padding:2px 6px; font-size:12px;">Xóa</button>`;
+                listBai7.appendChild(li);
+                inputBai7.value = '';
+            }
+        });
+
+        // Dùng Event Delegation cho bài 7 để bắt sự kiện nút Xóa cho cả phần tử sinh sau
+        listBai7.addEventListener('click', function(event) {
+            if (event.target.classList.contains('del-btn')) {
+                event.target.closest('li').remove();
+            }
+        });
+
+        // --- BÀI 8 ---
+        const inputBai8 = document.querySelector('#input-bai8');
+        const charCountBai8 = document.querySelector('#char-count-bai8');
+        inputBai8.addEventListener('input', function() {
+            const length = inputBai8.value.length;
+            charCountBai8.textContent = length;
+            if (length > 20) {
+                charCountBai8.style.color = 'red';
+            } else {
+                charCountBai8.style.color = 'black';
+            }
+        });
+
+        // --- BÀI 9 ---
+        const hoverTextBai9 = document.querySelector('#hover-text-bai9');
+        hoverTextBai9.addEventListener('mouseenter', function() {
+            hoverTextBai9.style.fontWeight = 'bold';
+            hoverTextBai9.style.fontStyle = 'italic';
+            hoverTextBai9.style.color = '#0066cc';
+        });
+        hoverTextBai9.addEventListener('mouseleave', function() {
+            hoverTextBai9.style.fontWeight = 'normal';
+            hoverTextBai9.style.fontStyle = 'normal';
+            hoverTextBai9.style.color = '#333';
+        });
+
+        // --- BÀI 10 ---
+        const formBai10 = document.querySelector('#form-bai10');
+        const inputBai10 = document.querySelector('#input-bai10');
+        const msgBai10 = document.querySelector('#msg-bai10');
+
+        formBai10.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn load lại trang
+            const val = inputBai10.value.trim();
+            if (val === '') {
+                msgBai10.textContent = 'Trường này không được để trống!';
+                msgBai10.style.color = 'red';
+            } else {
+                msgBai10.textContent = 'Gửi thành công!';
+                msgBai10.style.color = 'green';
+                inputBai10.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
