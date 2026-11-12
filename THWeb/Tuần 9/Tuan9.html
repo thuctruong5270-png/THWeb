@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Tuan9</title>
+</head>
+<body>
+    <script>
+        var btn = document.createElement("button");
+        var input = document.createElement('input');
+        var tag = document.createElement('tag');
+        var br = document.createElement('br');
+        var br1 = document.createElement('br');
+        btn.textContent = "Kiểm tra";
+        document.body.appendChild (input);
+        document.body.appendChild (br);
+        document.body.appendChild (btn);
+        document.body.appendChild (br1);
+        document.body.appendChild  (tag);
+        $(btn).on('click', function() {
+            var val = $(input).val ()
+            var ktra1 = /^[0-9]+$/
+            if ( ktra1.test(val)){
+                tag.textContent = 'đúng pattern' ;
+                tag.style.color = 'green';
+            }
+            else{
+                tag.textContent = 'sai pattern';
+                tag.style.color = 'red';
+            }
+            // var ktra2 = /^[0-9]{10}$/
+            // if ( ktra2.test(val)) {
+            //     tag.textContent = 'đúng pattern' ;
+            //     tag.style.color = 'green';
+            // }
+            // else{
+            //     tag.textContent = 'sai pattern';
+            //     tag.style.color = 'red';
+            // }
+            // var ktra3 = /^[a-z0-9_]{5,15}$/
+            //  if ( ktra3.test(val)) {
+            //     tag.textContent = 'đúng pattern' ;
+            //     tag.style.color = 'green';
+            // }
+            // else{
+            //     tag.textContent = 'sai pattern';
+            //     tag.style.color = 'red';
+            // }
+            // var ktra4 = /^0[0-9]{9}$/
+            //  if ( ktra4.test(val)) {
+            //     tag.textContent = 'đúng pattern' ;
+            //     tag.style.color = 'green';
+            // }
+            // else{
+            //     tag.textContent = 'sai pattern';
+            //     tag.style.color = 'red';
+            // }
+            // var ktra5 = /^[a-z]+@gmail\.com$/
+            // if ( ktra5.test(val)) {
+            //     tag.textContent = 'đúng pattern' ;
+            //     tag.style.color = 'green';
+            // }
+            // else{
+            //     tag.textContent = 'sai pattern';
+            //     tag.style.color = 'red';
+            // }
+            // var ktra6 = /^[A-Z]{2}[0-9]{3}$/
+            // if ( ktra6.test(val)) {
+            //     tag.textContent = 'đúng pattern' ;
+            //     tag.style.color = 'green';
+            // }
+            // else{
+            //     tag.textContent = 'sai pattern';
+            //     tag.style.color = 'red';
+            // }
+        }
+    )
+    </script>
+</body>
+</html>
